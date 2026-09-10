@@ -1,6 +1,9 @@
 #include<stdio.h>
+#include<locale.h>
 
 int main(){
+
+   setlocale(LC_ALL, "pt_BR.UTF-8");
 
     int a = 5;
     int b = 4;
