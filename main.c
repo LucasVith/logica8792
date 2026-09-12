@@ -7,15 +7,16 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int segundos, horas, minutos, resto;
-printf("digite a quantidade de segundos:");
-scanf("%d", &segundos);
+int n;
 
-horas = segundos / 3600;
-minutos = (segundos % 3600) / 60;
-resto = segundos % 60;
+ printf("digite um número:");
+ scanf("%d", &n);
+ if(n > 0){
+  printf("positivo\n");
 
-printf ("%d horas, %d minutos e %d segundos\n", horas, minutos, resto);
+ }else {
+  printf("negativo");
+ }
    
  
   return 0;
