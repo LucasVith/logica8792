@@ -7,14 +7,14 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-  float valor, cotacao;
+  float raio;
+  const float pi = 3.14159;
 
-  printf("digite o valor em reais:");
-  scanf("%f", &valor);
-  printf("digite a cotação do dolar:");
-  scanf("%f", &cotacao);
-  
-  printf("valor em dolares:%.2f\n", valor / cotacao);
+  printf("digite o raio do circulo:");
+  scanf("%f", &raio);
+  printf("area: %.2f\n", pi * raio * raio);
+  printf("perímetro: %.2f\n", 2 * pi * raio);
+
    
  
   return 0;
