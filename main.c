@@ -12,7 +12,11 @@ int n;
 printf("digite um número: ");
 scanf("%d", &n);
 
-printf("%s", n > 0 ? "positivo": (n < 0 ? "negativo" : "zero"));
+if(n % 2 == 0){
+   printf("\npar");
+}else{
+   printf("\nímpar");
+}
    
  
   return 0;
