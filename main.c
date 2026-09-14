@@ -7,13 +7,15 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int a, b, c, maior;
-printf("digite três números:");
-scanf("%d %d %d", &a, &b, &c);
+int a, b, c, d, e, maior;
+printf("digite cinco números:");
+scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
 
 maior = a;
 if(b > maior) maior = b;
 if(c > maior) maior = c;
+if(d > maior) maior = d;
+if(e > maior) maior = e;
 
    printf(" maior: %d", maior);
  
