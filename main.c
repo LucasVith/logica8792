@@ -13,9 +13,10 @@ int n;
  scanf("%d", &n);
  if(n > 0){
   printf("positivo\n");
-
+ }else if(n < 0){
+   printf("negativo");
  }else {
-  printf("negativo");
+  printf("igual a 0");
  }
    
  
