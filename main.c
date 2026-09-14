@@ -9,15 +9,10 @@ int main(){
 
 int n;
 
- printf("digite um número:");
- scanf("%d", &n);
- if(n > 0){
-  printf("positivo\n");
- }else if(n < 0){
-   printf("negativo");
- }else {
-  printf("igual a 0");
- }
+printf("digite um número: ");
+scanf("%d", &n);
+
+printf("%s", n > 0 ? "positivo": (n < 0 ? "negativo" : "zero"));
    
  
   return 0;
