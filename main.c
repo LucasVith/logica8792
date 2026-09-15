@@ -5,7 +5,7 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-   int a, b, c, d, e, menor;
+   int a, b, c, d, e, menor, maior;
 
    printf("digite um valor para a:");
    scanf("%d", &a);
@@ -28,8 +28,16 @@ int main(){
    if(c < menor) menor = c;
    if(d < menor) menor = d;
    if(e < menor) menor = e;
+   
+   maior = a;
 
-   printf("Menor: %d", menor);
+   if(b > maior) maior = b;
+   if(c > maior) maior = c;
+   if(d > maior) maior = d;
+   if(e > maior) maior = d;
+
+   printf("Menor: %d\n", menor);
+   printf("maior: %d\n", maior);
 
   return 0;
 }
