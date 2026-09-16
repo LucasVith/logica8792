@@ -5,16 +5,20 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
- int a,b;
+ int idade;
+ float altura;
 
- printf("digite dois números:");
- scanf("%d %d", &a, &b);
+printf("bem-vindos ao brinquedo roleta da morte!");
+printf("\nqual sua idade?");
+scanf("%d", &idade);
+printf("\nqual sua altura?");
+scanf("%f", &altura);
 
- if (a == b){
-   printf(" os números são iguais!\n");
- }else{
-   printf(" os números são diferentes!\n");
- }
+if((idade >= 18) && (altura >= 1.60)){
+  printf("você pode brincar na roleta!");
+}else{
+  printf("você não pode brincar na roleta!");
+}
 
   return 0;
 }
