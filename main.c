@@ -5,44 +5,20 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int mes;
+char letra;
+printf("digite uma letra:");
+scanf("%c", &letra);
 
-printf("digite um número de 1 a 12:");
-scanf("%d", &mes);
-
-switch (mes){
-
-  case 1:
-  case 2:
-  case 12:
-  printf("verão");
-  break;
-
-  case 3:
-  case 4:
-  case 5:
-  printf("outono");
-  break;
-
-  case 6 :
-  case 7 :
-  case 8 :
-  printf("inverno");
-  break;
- 
-  case 9 :
-  case 10 :
-  case 11:
-  printf("primavera");
-  break;
-  
-  default:
-  printf("número invalido!");
-  break;
+if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u' 
+  || letra =='A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U'){
+    printf("vogal\n");
+  }else{
+    printf("consoante\n");
+  }
 
   return 0;
 
-}
+
 
 
 }
