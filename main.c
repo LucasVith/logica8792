@@ -5,8 +5,8 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-for(int i = 0; i < 10000; i++){
-  printf("%d\n", i);
+for(int i = 0; i < 10; i++){
+  printf("%s\n %d", "\nOS números estão aumentando: ------>" ,i);
 }
 printf("\nMeu for funcionou!!");
   return 0;
