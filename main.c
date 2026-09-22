@@ -5,10 +5,9 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int idades[3] = {25,35,45};
-printf("%s %d %s\n", "Manoel tem, ", idades[0], "anos!");
-printf("%s %d %s\n", "Lucas tem,", idades[1], "anos!");
-printf("%s %d %s\n", "Gabriel tem, ", idades[2], " anos!");
+for(int i = 0; i <=10; i = i +2){
+  printf("%d\n",i);
+}
 return 0;
 
 
