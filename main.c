@@ -2,16 +2,21 @@
 #include<locale.h>
 #include<math.h>
 
+int fatorial(int n){
+   int resultado = 1;
+   for(int i = 1; i <= n; i++){
+      resultado *= i; //resultado = resultado * i
+   }
+   return resultado;
+}
+
+
 int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-char nome[50];
-
-printf("digite seu nome completo aqui: ");
-fgets(nome, sizeof(nome), stdin);// Lê até encontrar ENTER
-
-printf("Olá %s", nome);
+   int numero = 5;
+   printf("fatorial de %d = %d\n", numero, fatorial(numero));
 
 
 return 0;
