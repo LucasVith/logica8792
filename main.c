@@ -1,29 +1,22 @@
 #include<stdio.h>
 #include<locale.h>
-
+#include<math.h>
 
 int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int horas[12];
-int minutos[60];
+int numero;
+printf("Digite um núnero:" );
+scanf("%d", &numero);
 
-for(int i = 0; i < 12; i++){
-   horas[i] = i +1;
-}
+int quadrado = (int)pow(numero, 2);
+int cubo = (int)pow(numero, 3);
+printf("quadrado de %d = %d\n", numero, quadrado);
+printf("cubo de %d = %d", numero, cubo);
 
-for(int j = 0; j <60; j++){
-   minutos[j] = j;
-}
 
-for(int i = 0; i <12; i++){
-   for(int j = 0; j < 60; j++){
-         printf("horas: %2d:%02d\n",horas[i], minutos[j]);
 
-   }
-
-}
 return 0;
 
 
