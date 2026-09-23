@@ -6,15 +6,12 @@ int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int numero;
-printf("Digite um núnero:" );
-scanf("%d", &numero);
+char nome[50];
 
-int quadrado = (int)pow(numero, 2);
-int cubo = (int)pow(numero, 3);
-printf("quadrado de %d = %d\n", numero, quadrado);
-printf("cubo de %d = %d", numero, cubo);
+printf("digite seu nome completo aqui: ");
+fgets(nome, sizeof(nome), stdin);// Lê até encontrar ENTER
 
+printf("Olá %s", nome);
 
 
 return 0;
