@@ -2,23 +2,19 @@
 #include<locale.h>
 #include<math.h>
 
-void fibonacci (int termos){
-   int a = 0, b = 1, c;
-   printf("sequência de fibonacci (%d termos): \n", termos);
-   for(int i = 1; i <= termos; i ++){
-      printf("%d\n", a);
-      c = a + b;
-      a = b;
-      b = c;
-   }
-   printf("\n");
+void tabuada(int n){
+   printf("tabuada do %d\n",n);
+for(int i = 1; i <= 10; i ++){
+   printf("%d x %d = %d\n", n, i, n * i);
 }
+}
+
 
 int main(){
 
    setlocale(LC_ALL, "pt_BR.UTF-8");
 
-   fibonacci(10);
+   tabuada(7);
 
 
 return 0;
