@@ -7,17 +7,13 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
- 
- int numero, soma = 0;
-
-printf("digite numero para somar(0 encerra): 0");
-scanf("%d", &numero);
-
-while(numero != 0){
-  soma += numero;
-  scanf("%d", &numero);
+int i = 1;
+while(i<= 50){
+  if(i % 2 == 0){
+    printf("%d\n", i);
+  }
+  i++;
 }
-printf("soma total = %d\n", soma);
 
 
 
