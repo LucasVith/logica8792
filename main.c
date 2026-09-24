@@ -2,26 +2,20 @@
 #include<locale.h>
 #include<math.h>
 
-int tabuada(int n){
-  
-   printf("tabuada do %d\n",n);
-for(int i = 1; i <= 10; i ++){
-  
-   printf("%d x %d = %d\n", n, i, n * i);
+void verificarheparimpar(int n){
+if(n % 2 == 0){
+   printf("%d é par!\n", n);
+}else{
+   printf("%d é ímpar\n", n);
 }
-return 0;
 }
 
 
 int main(){
+setlocale(LC_ALL, "pt_BR.UTF-8");
 
-   setlocale(LC_ALL, "pt_BR.UTF-8");
-
-   int numero;
-   printf("Digite um número para ver a tabuada:" );
-   scanf("%d", &numero);
-   tabuada(numero);
-
+  verificarheparimpar(10);
+  verificarheparimpar(7);
 
 return 0;
 
