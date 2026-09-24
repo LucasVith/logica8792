@@ -8,15 +8,12 @@ int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
  
-  int n;
-  printf("digite um numero:");
-  scanf("%d", &n);
-  
-  if (n %2==0){
-printf(" o numero é par");
-  }else{
-   printf("o numero é impar");
-  }
+ int i = 1;
+
+ while(i <=5){
+  printf("%d\n", i);
+   i++;
+ }
 
 
 return 0;
