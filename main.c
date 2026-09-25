@@ -7,16 +7,17 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n;
-long long fatorial = 1;
+int tab ;
+printf("digite um número para a tabuada: ");
+scanf("%d", &tab);
 
-printf("digite um número: ");
-scanf("%d", &n);
+for(int i = 0; i <=10; i ++){
 
-for(int i = 1; i <= n; i++){
-  fatorial *= i;
+int resultado = tab * i;
+printf("o resultado de %d x %d = %d\n", tab, i, resultado);
 }
-printf("fatorial: %lld\n", fatorial);
+
+
 
 
 return 0;
