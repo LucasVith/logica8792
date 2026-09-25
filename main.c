@@ -8,21 +8,18 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n, soma=0;
+int n, resto, invertido = 0;
 
 printf("digite um numero: ");
 scanf("%d", &n);
 
-for(int i = 1; i <n; i++){
-  if(n % i == 0){
-    soma += i;
-  }
+while(n != 0){
+  resto = n % 10;
+  invertido = invertido *10 + resto;
+  n/= 10;
 }
-if(soma == n){
-  printf("%d é um numero perfeito\n", n);
-}else{
-  printf("%d não é um numero perfeito\n", n);
-}
+
+printf("Número invertido: %d\n", invertido);
 
 return 0;
 
