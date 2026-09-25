@@ -7,14 +7,20 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int tab ;
-printf("digite um número para a tabuada: ");
-scanf("%d", &tab);
+int n;
+int resultado;
 
-for(int i = 0; i <=10; i ++){
+printf("digite um numero para a tabuada:" );
+resultado = scanf("%d", &n);
 
-int resultado = tab * i;
-printf("o resultado de %d x %d = %d\n", tab, i, resultado);
+if(resultado != 1){
+  printf("entrada invalida! por favor, digite apenas numeros!");
+  return 1;
+}
+
+for(int i = 1; i <=10; i ++){
+  int resposta = n * i;
+  printf("o resultado de %d x %d é: %d\n", n, i, resposta);
 }
 
 
