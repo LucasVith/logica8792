@@ -8,13 +8,20 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-for(int i = 1; i <3; i++){
-  for(int j = 1; j <3; j++){
-    printf("For externo e for interno: %d %d\n", j, i);
+int contador = 0;
+
+for(int i = 0; i <=9; i++){
+  for(int j = 0; j <=9; j++){
+    for(int k = 0; k <=9; k++){
+      for(int l = 0; l <=9; l++){
+        contador++;
+            printf("possiveis combinações: %d %d %d %d\n", i, j, k, l);
+
+      }
+    }
   }
 }
-
-
+printf("há %d possibilidades de senha", contador);
 
 return 0;
 
