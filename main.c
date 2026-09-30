@@ -8,22 +8,25 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n;
-printf("digite o número de linhas:");
+int n, primo = 1;
+printf("digite um número: ");
 scanf("%d", &n);
 
-for(int i = 0; i < n; i++){
-  long long valor = 1;
-  for(int espaco = 0; espaco < n - i; espaco++){
-    printf(" ");
+if(n < 2){
+primo = 0;
+}else{
+ for(int i = 2; i < n; i++){
+ if(n % i == 0 ){
+ primo = 0;
+ break;
   }
-  for(int j = 0; j <= i; j++){
-    printf("%lld", valor);
-    valor = valor * (i - j) / (j + 1);
-  }
-  printf("\n");
+ }
 }
-
+if(primo){
+  printf("%d é primo\n", n);
+}else{
+  printf("%d não é primo\n",n);
+}
 
 
 
