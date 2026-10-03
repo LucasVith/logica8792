@@ -14,18 +14,19 @@ printf("digite o tamanho do vetor: ");
 scanf("%d", &n);
 
 int v[n];
-int pares = 0, impares = 0;
+
 for(int i = 0; i < n; i ++){
   printf("digite o valor de %d:", i +1);
   scanf("%d", &v [i]);
-  if(v[i] % 2 == 0){
-     pares++;
-  }else{
-    impares++;
+  if(v[i] < 0){
+    v[i] = 0;
   }
 }
-printf("pares: %d\n", pares);
-printf("impares: %d\n", impares);
+printf("vetor ajustado: \n");
+for(int i = 0; i < n; i++){
+  printf("%d", v[i]);
+}
+printf("\n");
 
 return 0;
 
