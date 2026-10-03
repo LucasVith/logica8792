@@ -18,16 +18,19 @@ int v[n];
 for(int i = 0; i < n; i ++){
   printf("digite o valor de %d:", i +1);
   scanf("%d", &v [i]);
-  if(v[i] < 0){
-    v[i] = 0;
+}
+int ordenado = 1;
+for(int i = 0; i < n - 1; i++){
+  if(v[i] > v[i + 1]){
+    ordenado = 0;
+    break;
   }
 }
-printf("vetor ajustado: \n");
-for(int i = 0; i < n; i++){
-  printf("%d", v[i]);
+if(ordenado){
+  printf("o vetor está ordenado de forma crescente\n");
+}else{
+  printf("o vetor não está ordenado\n");
 }
-printf("\n");
-
 return 0;
 
 
