@@ -3,34 +3,30 @@
 #include<string.h>
 
 
-
-
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int n, pos;
+int voto;
 
-printf("digite o tamanho do vetor: ");
-scanf("%d", &n);
+printf("Candidatos concorrendo:\n10- Manoel\n20- Carla\n30- Bianca\n40- Henrique\n50- Bruno\n");
+printf("digite o número do seu candidato:\n");
+scanf("%d", &voto);
 
-int v[n];
-
-for(int i = 0; i < n; i ++){
-  printf("digite o valor de %d:", i +1);
-  scanf("%d", &v [i]);
+if(voto == 10){
+  printf("Candidato escolhido: Manoel");
+}else if(voto == 20){
+  printf("Candidato escolhido: Carla");
+}else if(voto == 30){
+printf("Candidato escolhido: Bianca");
+}else if(voto == 40){
+  printf("Candidato escolhido: Henrique");
+}else if(voto == 50){
+printf("Candidato escolhido: Bruno");
+}else if(voto == 0){
+  printf("voto nulo");
+}else{
+  printf("voto invalido!");
 }
-printf("digite a posição a remover (0 a %d): ", n - 1);
-scanf("%d", &pos);
-for(int i = pos; i < n - 1; i++){
-  v[i] = v [i + 1];
-}
-n--;
-printf("vetor após remoção: \n");
-for(int i = 0; i < n; i++){
-  printf("%d", v[i]);
-}
-printf("\n");
-
 return 0;
 
 
