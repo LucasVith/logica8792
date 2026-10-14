@@ -8,21 +8,27 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int numero;
-int sucesso;
+int n;
 
-do{
-  printf("Digite  um número maior que 0: ");
-  sucesso = scanf("%d",&numero);
-
-  if(sucesso !=1){
-    printf("Entrada inválida! digite apenas números inteiro.\n");
-    while(getchar()!= '\n');
-    numero = 0;
-  }
-}while(numero <=0);
-
-printf("Você digitou %d, que é válido!\n", numero);
+printf("Digite o tamanho dos vetores: ");
+scanf("%d", &n);
+int a[n], b[n], soma[n];
+printf("Digite os valores do vetor A:\n");
+for(int i = 0; i < n; i++){
+  scanf("%d", &a [i]);
+}
+printf(" digite os valores do vetor B:\n");
+for(int i = 0; i < n; i++){
+  scanf("%d", &b[i]);
+}
+for(int i =0; i < n; i++){
+  soma[i] = a[i] + b[i];
+}
+printf("Vetor soma:\n");
+for(int i = 0; i < n; i++){
+  printf("%d\n", soma[i]);
+}
+printf("\n");
 
 return 0;
 
