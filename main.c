@@ -6,8 +6,10 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-for(int i = 1; i <= 5; i++){
- printf("%d - programar\n", i);
+int num = 10;
+while(num >=1){
+  printf("%d - programar\n",num);
+  num--;
 }
 
 return 0;
