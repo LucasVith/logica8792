@@ -6,15 +6,17 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int numero, soma = 0;
-printf("Digites números para somar! digite 0 para sair!\n ");
-scanf("%d", &numero);
-while(numero !=0){
-    soma += numero;
-  printf("digite um numero:");
-scanf("%d", &numero);
-}
-printf("soma: %d\n", soma);
+int n;
+do{
+  printf("Digite um número (não negativo):");
+  scanf("%d", &n);
+} while(n < 0);
+
+printf("Você digitou: %d\n", n);
+
+
+
+
 return 0;
 
 
