@@ -6,13 +6,14 @@
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float nota;
-do{
-  printf("Digite uma nota (0 a 10)):");
-  scanf("%f", &nota);
-} while(nota < 0 || nota > 10);
 
-printf("Nota válida: %.1f\n", nota);
+int resposta;
+do{
+  printf("Executandando o programa..\n");
+  printf("Deseja continuar? ( - sim / 0 - não):");
+  scanf("%d",&resposta);
+}while(resposta == 1);
+printf("Programa encerrado!\n");
 
 
 
