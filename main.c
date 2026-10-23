@@ -8,23 +8,36 @@ setlocale(LC_ALL, "pt_BR.UTF-8");
 
 
 int opcao;
-do{
- printf("\n--- MENU ---\n");
- printf("1 - Dizer olá\n");
- printf("2 - Dizer tchau\n");
- printf("0 - Sair\n");
- printf("Escolha: ");
- scanf("%d", &opcao);
- if(opcao == 1){
-  printf("olá\n");
- }else if(opcao == 2){
-  printf("tchau!\n");
- }else if(opcao != 0){
- printf("opção inválida!");
- }
-}while(opcao != 0);
-printf("Até mais!\n");
 
+printf("digite uma número de 1 a 12 para saber quantos dias a no mes digitado!\n");
+scanf("%d", &opcao);
+
+switch (opcao)
+{
+
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10:
+  case 12:
+  printf("31 dias!");
+  break;
+  case 2:
+  printf("28 dias!");
+  break;
+  case 4:
+  case 6:
+  case 9:
+  case 11:
+  printf("30 dias!");
+  default:
+  printf("número inválido!");
+  break;
+
+
+}
 return 0;
 
 
