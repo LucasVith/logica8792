@@ -7,16 +7,23 @@ int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
 
-int numero, soma = 0;
+int opcao;
 do{
-  printf("Digite um número (0 para parar):");
-  scanf("%d",&numero);
-  soma += numero;
-}while(numero != 0);
-printf("soma: %d\n", soma);
-
-
-
+ printf("\n--- MENU ---\n");
+ printf("1 - Dizer olá\n");
+ printf("2 - Dizer tchau\n");
+ printf("0 - Sair\n");
+ printf("Escolha: ");
+ scanf("%d", &opcao);
+ if(opcao == 1){
+  printf("olá\n");
+ }else if(opcao == 2){
+  printf("tchau!\n");
+ }else if(opcao != 0){
+ printf("opção inválida!");
+ }
+}while(opcao != 0);
+printf("Até mais!\n");
 
 return 0;
 
