@@ -3,84 +3,47 @@
 #include<string.h>
 
 #define QTD 5
-void cadastrar(float notas[]){
-  for(int i = 0; i < QTD; i++){
-    printf("Digite a nota do aluno %d:", i + 1);
-  scanf("%d", &notas[i]);  
-  }
-}
-void mostrar(float notas[]){
-  for(int i = 0; i < QTD; i++){
-    printf("Aluno %d: %.1f\n", i +1, notas[i]);
-  }
-}
-float calcularmedia(float notas[]){
-  float soma = 0;
-  for(int i = 0; i < QTD; i++){
-    soma += notas[i];
-  }
-  return soma / QTD;
-}
-float maiornota(float notas[]){
-  float maior = notas[0];
-  for(int i =1; i < QTD; i++){
-    if(notas[i] > maior){
-      maior = notas[i];
-    }
-  }
-  return maior;
-}
+
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float notas [QTD];
-int opcao;
-int cadastrado = 0;
-
-do{
-  printf("\n--- controle de notas ---\n");
-  printf("1 cadastrar notas\n");
-  printf("2 mostrar notas\n");
-  printf("3 média da turma\n");
-  printf("4 maior nota\n");
-  printf("0 sair\n");
-  printf("Escolha:");
-  scanf("%d", & opcao);
-  switch (opcao)
-  {
-  case 1:
-  cadastrar(notas);
-  cadastrado = 1;
-  break;
-  case 2:
-  if(cadastrado){
-    mostrar(notas);
-  }else{
-    printf("Nenhuma nora cadastrada ainda.\n");
+const int DIAS = 7;
+float temp[DIAS];
+float soma = 0, media;
+float maior, menor;
+int diamaior = 1, diamenor = 1;
+int acimamedia = 0;
+for(int i = 0; i < DIAS; i++){
+  printf("temperatura do dia %d: ", i + 1);
+  scanf("%f", &temp[i]);
+  soma += temp[i];
+}
+media = soma / DIAS;
+maior = temp[0];
+menor = temp[0];
+for(int i = 1; i < DIAS; i++){
+  if(temp[i] > maior){
+    maior = temp[i];
+    diamaior = i + 1;
   }
-  break;
-  case 3:
-  if(cadastrado){
-    printf("média da turma: %.2f\n", calcularmedia(notas));
-  }else{
-    printf("nenhuma nota cadastrada ainda.\n");
+  if(temp[i] < menor){
+    menor = temp[i];
+    diamenor = i + 1;
   }
-  break;
-  case 4:
-  if(cadastrado){
-    printf("maior nota: %.1f\n", maiornota(notas));
-  }else{
-    printf("nenhuma nota cadastrada ainda.\n");
+}
+for(int i = 0; i < DIAS; i++){
+  if(temp[i] > media){
+    acimamedia++;
   }
-  break;
-  case 0:
-  printf("até mais!\n");
-  break;
-  default:
-  printf("opção inválida!\n");
-    break;
-  }
-}while(opcao != 0);
+}
+printf("\n--- temperatura ---\n");
+for(int i = 0; i < DIAS; i++){
+  printf("dia %d: %.1f\n", i + 1, temp[i]);
+}
+printf("\nmédia da semana: %.1f\n", media);
+printf("maior: %.1f (dia %d)\n", maior, diamaior);
+printf("menor: %.1f (dia %d)\n", menor, diamenor);
+printf("dias acima da média: %d\n", acimamedia);
 
 
 return 0;
