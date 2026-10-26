@@ -4,44 +4,30 @@
 #include<stdlib.h>
 #include<time.h>
 
+
+
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-const int max_tentativas = 7;
-int tentativas[max_tentativas];
-int secreto, palpite;
-int usadas = 0, acertou = 0;
+const int lancamentos = 10;
+int dados [lancamentos];
+int soma = 0;
+int seis = 0;
+
 srand(time(NULL));
-secreto = rand() % 100 + 1;
-printf("Advinhe o número entre 1 e 100.\n");
-printf("você tem %d tentativas.\n", max_tentativas);
-do{
-  printf("\ntentativa %d: ", usadas + 1);
-  scanf("%d", &palpite);
-  if(palpite < 1 || palpite > 100){
-    printf("Digite um número entre 1 e 100!\n");
-  }else{
-    tentativas[usadas] = palpite;
-    usadas++;
-    if(palpite == secreto){
-      acertou = 1;
-    }else if(palpite < secreto){
-      printf("o número secreto é MAIOR!\n");
-    }else{
-      printf("o número secreto é MENOR!\n");
-    }
+for(int i = 0; i < lancamentos; i ++){
+  dados[i] = rand() % 6 + 1;
+  soma += dados[i];
+  if(dados[i] == 6){
+    seis++;
   }
-}while(!acertou && usadas < max_tentativas);
-printf("\n--- FIM DE JOGO ---\n");
-if(acertou){
-  printf("parabéns você acertou em %d tentativa(s).\n", usadas);
-}else{
-  printf("suas tentativas acabaram. o número era %d.\n", secreto);
 }
-printf("histórico de palpites:\n");
-for(int i = 0; i < usadas; i++){
-  printf("%d %d\n", i + 1, tentativas[i]);
+printf("resultados dos lançamentos\n");
+for(int i = 0; i < lancamentos; i++){
+  printf("lançamentos %d: %d\n", i + 1, dados[i]);
 }
+printf("\nsoma: %d\n", soma);
+printf("quantidade de vezes que saiu 6: %d\n", seis);
 
 return 0;
 
