@@ -4,16 +4,15 @@
 #include<stdlib.h>
 #include<time.h>
 
-int dobro(int numero){
-  return numero * 2;
+void mostrarNome(char nome[]){
+  printf("nome: %s\n", nome);
 }
 
 
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-int valor = 8;
-printf("dobro = %d\n", dobro(valor));
+mostrarNome("eduardo");
 
  return 0;
 }
