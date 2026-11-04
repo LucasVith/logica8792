@@ -4,22 +4,28 @@
 #include<stdlib.h>
 #include<time.h>
 
-
+int ehpar(int n){
+  return n % 2 == 0;
+}
 
 
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-char texto [100];
-int tamanho = 0;
-printf("Digite uma frase: ");
-fgets(texto, 100, stdin);
-texto[strcspn(texto, "\n")] = '\0';
+int quantidade = 0;
+int soma = 0;
 
-while(texto[tamanho] != '\0'){
-  tamanho++;
+printf("pares de 1 a 20: ");
+for(int i = 1; i <= 20; i++){
+  if(ehpar(i)){
+    printf("%d ", i);
+    quantidade++;
+    soma += i;
+  }
 }
-printf("quantidade de caracteres: %d\n", tamanho);
+printf("\nquantidade: %d\n ", quantidade);
+printf("soma: %d\n", soma);
+
 
  return 0;
 }
