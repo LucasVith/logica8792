@@ -4,27 +4,21 @@
 #include<stdlib.h>
 #include<time.h>
 
-float lerpositivo(char mensagem[]){
-  float valor;
-do{
-  printf("%s", mensagem);
-  scanf("%f", &valor);
-  if(valor <=0){
-    printf("valor inválido! digite um número maior que 0.\n");
+void contagem(int n){
+  if(n == 0){
+    printf("fogo!\n");
+    return;
   }
-}while(valor <= 0);
-return valor;
+  printf("%d\n", n);
+  contagem(n - 1);
+
 }
+
 
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float idade = lerpositivo("digite a idade: ");
-float altura = lerpositivo("Digite a altura (M)" );
-float peso = lerpositivo("Digite o peso (KG) ");
-
-printf("\nidade: %.0f anos\n", idade);
-printf("IMC: %f\n", peso / (altura * altura));
+contagem(5);
 
 
  return 0;
