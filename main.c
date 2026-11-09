@@ -13,7 +13,13 @@ return base * altura;
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-printf("Área: %.2f\n", areaRetangular(5, 3.5));
+float a, b;
+printf("digite o valor de A: ");
+scanf("%f", &a);
 
+printf("digite o valor de b: ");
+scanf("%f", &b);
+
+printf("valor da área: %.2f\n", areaRetangular(a, b));
  return 0;
 }
