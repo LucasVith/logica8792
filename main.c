@@ -4,8 +4,13 @@
 #include<stdlib.h>
 #include<time.h>
 
-float celsiusParaFahrenheit(float c){
-  return c * 9 / 5 + 32;
+int soma(int n){
+  int total = 0;
+  for(int i = 1; i <= n; i++){
+    total += i;
+  }
+
+return total;
 }
     
 
@@ -13,15 +18,7 @@ float celsiusParaFahrenheit(float c){
 int main(){
 setlocale(LC_ALL, "pt_BR.UTF-8");
 
-float celsius;
-float fahrenehit;
-
-printf("digite  a temperatura em celsius: ");
-scanf("%f", &celsius);
-
-fahrenehit = celsiusParaFahrenheit(celsius);
-
-printf("%.1f c = %.1f f\n", celsius, fahrenehit);
+printf("soma de 1 a n: %d\n", soma(10));
 
  return 0;
 }
