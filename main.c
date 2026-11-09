@@ -4,15 +4,14 @@
 #include<stdlib.h>
 #include<time.h>
 
-void contagem(int n){
-  if(n == 0){
-    printf("fogo!\n");
-    return;
+ void contagem(int n){
+  for(int i = n; i >= 1; i--){
+    printf("%d\n", i);
   }
-  printf("%d\n", n);
-  contagem(n - 1);
-
-}
+  printf("fogo!\n");
+   }
+  
+    
 
 
 int main(){
